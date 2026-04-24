@@ -37,9 +37,9 @@ pipeline:
       type: String
       description: ""
       required: false
-      value: "25"
+      value: <+input>
     - name: Note
       type: String
       description: ""
       required: false
-      value: harness / main
+      value: <+input>
