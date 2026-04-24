@@ -24,9 +24,15 @@ pipeline:
                       type: Inline
                       spec:
                         script: |-
-                          echo "Trigger Info"
-                          echo "                Branch: <+trigger.branch>"
-                          echo "  Trigger targetBranch: <+trigger.targetBranch>"
+                          echo "
+                          Trigger Info
+                                  Branch: <+trigger.branch>"
+                            targetBranch: <+trigger.targetBranch>"
+
+                          Inputs
+                            java_version: <+pipeline.variables.java_version>
+                                    note: <+pipeline.variables.Note>
+                          "
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
