@@ -26,8 +26,8 @@ pipeline:
                         script: |-
                           echo "
                           Trigger Info
-                                  Branch: <+trigger.branch>"
-                            targetBranch: <+trigger.targetBranch>"
+                                  Branch: <+trigger.branch>
+                            targetBranch: <+trigger.targetBranch>
 
                           Inputs
                             java_version: <+pipeline.variables.java_version>
