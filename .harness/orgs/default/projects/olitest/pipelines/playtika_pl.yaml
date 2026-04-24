@@ -1,0 +1,34 @@
+pipeline:
+  name: playtika_pl
+  identifier: playtika_pl
+  projectIdentifier: olitest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Info
+                  identifier: Info
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          echo "Trigger Info"
+                          echo "                Branch: <+trigger.branch>"
+                          echo "  Trigger sourceBranch: <+trigger.sourceBranch>"
+                          echo "  Trigger sourceBranch: <+trigger.targetBranch>"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
