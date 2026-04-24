@@ -32,3 +32,14 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  variables:
+    - name: java_version
+      type: String
+      description: ""
+      required: false
+      value: "25"
+    - name: Note
+      type: String
+      description: ""
+      required: false
+      value: harness / main
