@@ -25,10 +25,7 @@ pipeline:
                       spec:
                         script: |-
                           echo "
-                          Trigger Info
-                                  Branch: <+trigger.branch>
-                            targetBranch: <+trigger.targetBranch>
-
+                          Trigger Branch: <+trigger.branch>
                           Inputs
                             java_version: <+pipeline.variables.java_version>
                                     note: <+pipeline.variables.Note>
