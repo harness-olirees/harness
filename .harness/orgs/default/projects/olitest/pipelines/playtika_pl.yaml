@@ -26,8 +26,7 @@ pipeline:
                         script: |-
                           echo "Trigger Info"
                           echo "                Branch: <+trigger.branch>"
-                          echo "  Trigger sourceBranch: <+trigger.sourceBranch>"
-                          echo "  Trigger sourceBranch: <+trigger.targetBranch>"
+                          echo "  Trigger targetBranch: <+trigger.targetBranch>"
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
