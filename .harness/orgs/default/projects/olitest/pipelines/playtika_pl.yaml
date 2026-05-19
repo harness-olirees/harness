@@ -39,7 +39,7 @@ pipeline:
       type: String
       description: ""
       required: false
-      value: <+input>
+      value: fixed18
     - name: Note
       type: String
       description: ""
