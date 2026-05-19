@@ -1,0 +1,52 @@
+pipeline:
+  projectIdentifier: olitest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Info
+                  identifier: Info
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: |-
+                          echo "
+                          Trigger Branch: <+trigger.branch>
+                          Inputs
+                            java_version: <+pipeline.variables.java_version>
+                                    note: <+pipeline.variables.Note>
+                          "
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
+  variables:
+    - name: java_version
+      type: String
+      description: ""
+      required: false
+      value: fixed18
+    - name: Note
+      type: String
+      description: ""
+      required: false
+      value: <+input>
+    - name: extra
+      type: String
+      description: ""
+      required: false
+      value: <+input>.default(extra01)
+  identifier: playtika_pl_2
+  name: playtika_pl_2
