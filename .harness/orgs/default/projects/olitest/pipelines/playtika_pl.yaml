@@ -45,3 +45,8 @@ pipeline:
       description: ""
       required: false
       value: <+input>
+    - name: extra
+      type: String
+      description: ""
+      required: false
+      value: <+input>.default(extra01)
